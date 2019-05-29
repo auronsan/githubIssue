@@ -16,12 +16,12 @@ export const IssueItem = (props) => (
         </a>
         <div className="issue__body">
             <a
-                href={props.issue.url}
+                href={props.issue.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="issue__body-title">{props.issue.title}</a>
             <span className="issue__body-content">
-                <Truncate text={props.issue.body}/>
+                <Truncate text={props.issue.body} maxText={255}/>
             </span>
         </div>
         <div className="issue__legend">

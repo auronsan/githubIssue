@@ -13,39 +13,74 @@ a {
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
- }
-
+}
 @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
- }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
- .fadeIn {
+.fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
- }
+}
 
- .navbar {
-     border-bottom: 4px solid dodgerblue; 
- }
+.header {
+    position: relative;
+    z-index: 2;
+}
+.body {
+    position: relative;
+    z-index: 1;
+    width: 1024px;
+    margin: 0 auto;
+    min-height: 600px;
+}
 
- .loader {
+.loader {
     position: absolute;
     left: 50%;
     top: 50%;
     animation: rotate 1s 0s linear infinite;
- }
- @keyframes rotate {
-  from {
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+}
+@keyframes rotate {
+    from {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+button {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    font-size: 14px;
+    color: #000000;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &:focus,
+    &:hover {
+        color: #0053ba;
+    }
+    &:focus {
+        outline: 1px solid #fff;
+        outline-offset: -4px;
+    }
+    &:active {
+        transform: scale(0.99);
+    }
 }

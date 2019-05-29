@@ -1,6 +1,6 @@
 export const Truncate = (props) => {
-    if(props.text.length > 255) {
-        return props.text.substr(0,255) + ' ....';
+    if(props.text.length > props.maxText) {
+        return props.text.substr(0,props.maxText) + ' ....';
     } else {
         return props.text;
     }
