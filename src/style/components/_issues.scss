@@ -41,7 +41,7 @@
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
         }
         &-label{
-            border-radius: 20px;
+            border-radius: 10px;
             color: white;
             padding: 5px 10px;
             margin-right: 10px;
@@ -50,4 +50,8 @@
         }
     }
 
+}
+
+.highlighted {
+    background-color: orange;
 }

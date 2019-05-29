@@ -28,3 +28,24 @@ a {
  .navbar {
      border-bottom: 4px solid dodgerblue; 
  }
+
+ .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: rotate 1s 0s linear infinite;
+ }
+ @keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

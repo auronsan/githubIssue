@@ -2,7 +2,10 @@ import React from 'react';
 import {Truncate} from '../../utils/truncate';
 
 export const IssueItem = (props) => (
-    <div className="issue__item">
+    <div
+        className={"issue__item " + (props.hightlight
+        ? 'highlighted'
+        : '')}>
         <a href={props.issue.user.html_url} target="_blank" rel="noopener noreferrer">
             <div
                 className="issue__item-avatar"
