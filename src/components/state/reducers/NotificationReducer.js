@@ -10,7 +10,6 @@ const initialState = {
 // REDUCER
 
 export const NotificationReducer = (state = initialState, action) => {
-    console.log(action);
     switch (action.type) {
         case FETCH_NOTIFICATIONS_FULFILLED:
             return {

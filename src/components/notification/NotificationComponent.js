@@ -7,18 +7,12 @@ import {bindActionCreators} from 'redux';
 
 import {openModalNotifcation, closeModalNotification, fetchNotifications, clearNotifications} from '../state/actions/NotificationAction';
 
-import {Loading} from '../globals/loading';
 import {NotificationItem} from './NotificationItem';
 
 class NotificationComponent extends Component {
 
     componentDidMount() {
-        //console.log(this.props);
         this.props.fetchNotifications();
-    }
-
-    componentWillReceiveProps(nextProps) {
-        //console.log(nextProps);
     }
 
     toggleModal() {
