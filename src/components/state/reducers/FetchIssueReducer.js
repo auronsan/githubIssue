@@ -13,7 +13,6 @@ const initialState = {
 // REDUCER
 
 export const FetchIssuesReducer = (state = initialState, action) => {
-    console.log(action);
     switch (action.type) {
         case FETCH_ISSUES_PENDING:
             return {
