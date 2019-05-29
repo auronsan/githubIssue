@@ -21,10 +21,6 @@ class IssueComponent extends Component {
             .fetchHighLight();
     }
 
-    componentWillReceiveProps(nextProps) {
-        //console.log(nextProps);
-    }
-
     next() {
         const next_page = this.props.currentPage + 1;
         this

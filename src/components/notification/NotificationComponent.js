@@ -13,12 +13,7 @@ import {NotificationItem} from './NotificationItem';
 class NotificationComponent extends Component {
 
     componentDidMount() {
-        //console.log(this.props);
         this.props.fetchNotifications();
-    }
-
-    componentWillReceiveProps(nextProps) {
-        //console.log(nextProps);
     }
 
     toggleModal() {
