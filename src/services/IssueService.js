@@ -22,7 +22,7 @@ export const fetchHighLightIssueList = () => {
 export const unHighlightIssueItem = (data) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            localStorage.clear('highlighitem');
+            localStorage.removeItem('highlighitem');
             addNotification(data, false);
             resolve({});
         }, 10);
@@ -40,6 +40,24 @@ export const highLightIssueItem = (data) => {
     });
 }
 
+export const getNotification = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const notificationList = JSON.parse(localStorage.getItem('notification'));
+            resolve(notificationList);
+        }, 10);
+    });
+}
+
+export const clearNotification = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            localStorage.removeItem('notification');
+            resolve([]);
+        }, 10);
+    });
+}
+
 const addNotification = (data, highlight = true) => {
     let notificationList = localStorage.getItem('notification')
     if (notificationList == null) {
@@ -50,11 +68,11 @@ const addNotification = (data, highlight = true) => {
     const notificationObj = {
         'id': data.id,
         'title': data.title,
-        'avatar_user': data.user.avatar_user,
+        'avatar_url': data.user.avatar_url,
         'user_name': data.user.login,
-        'hightlight': highlight
+        'highlight': highlight
     }
-    notificationList.push(notificationObj);
+    notificationList.unshift(notificationObj);
     localStorage.setItem('notification', JSON.stringify(notificationList));
-
 }
+

@@ -1,0 +1,93 @@
+.notification {
+    &__container {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 100px;
+        &.open {
+            & .notification__content {
+                border-radius: 10px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                background-color: white;
+                position: absolute;
+                left: -150px;
+                max-width: 250px;
+                top: 20px;
+            }
+            & .fa-bell {
+                color: #4fd619;
+            }
+            & .notification__content-header{
+                border-bottom: solid 1px #dddfe2;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__content {
+        &-item {
+            padding: 5px 0;
+            border-bottom: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            &:last-child {
+                border: none;
+            }
+        }
+        &__clear-filter {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        &-header{
+            position: relative;
+            top: 0px;
+            background-color: white;
+            width: 250px;
+            margin-top: 10px;
+        }
+        &-body{
+            padding: 10px;
+            max-height: 550px;
+            overflow-y: overlay;
+            word-wrap: break-word;
+        }
+    }
+
+    &__item {
+        &-title {
+            display: flex; 
+            align-items: center;
+        }
+        &-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            background-size: cover;
+            margin: 0px 10px;
+        }
+    }
+
+    &__no-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__label-count{
+        font-size: 12px;
+        position: relative;
+        top: -25px;
+        left: 8px;
+        border-radius: 20px;
+        background-color: red;
+        width: 15px;
+        height: 15px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

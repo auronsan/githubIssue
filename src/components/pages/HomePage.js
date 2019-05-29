@@ -2,15 +2,20 @@
 
 import React from 'react';
 
-import {IssueComponent} from '../Issue/IssueComponent';
+import {IssueComponent} from '../issue/IssueComponent';
+import {NotificationComponent} from '../notification/NotificationComponent.js';
+
 
 export const HomePage = () => (
     <main>
-        <div className="jumbotron jumbotron-fluid text-dark bg-light animated fadeIn">
-            <h1 className="display-6 text-center">React-Redux</h1>
-            <p className="lead text-center">Github Issue list</p>
-            <hr className="my-4"/>
+        <div className="header animated fadeIn">
+            <h1>React-Redux</h1>
+            <p>Github Issue list</p>
+            <NotificationComponent/>
+            <hr/>
         </div>
-        <IssueComponent/>
+         <div className="body">
+         <IssueComponent/>
+         </div>
     </main>
 );

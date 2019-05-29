@@ -8,13 +8,14 @@ import {bindActionCreators} from 'redux';
 
 import {fetchIssueList} from '../state/actions/IssueActions';
 import {highlightIssue, unHighlightIssue, fetchHighLight} from '../state/actions/HighlightActions';
+import {fetchNotifications} from '../state/actions/NotificationAction';
 
 import {Loading} from '../globals/loading';
 
 class IssueComponent extends Component {
 
     componentDidMount() {
-        //this.props.fetchIssueList();
+        this.props.fetchIssueList();
         this
             .props
             .fetchHighLight();
@@ -38,21 +39,27 @@ class IssueComponent extends Component {
     }
     hightlight(item) {
         if (this.props.highlightItem && this.props.highlightItem.id === item.id) {
-            return this
+            this
                 .props
                 .unHighlightIssue(item);
+            return this
+                .props
+                .fetchNotifications();
         }
-        return this
+        this
             .props
             .highlightIssue(item);
+        return this
+            .props
+            .fetchNotifications();
     }
     render() {
         return (
             <div>
-                <button
+                {/*<button
                     onClick={this
                     .fetchIssues
-                    .bind(this)}>fetch now</button>
+                    .bind(this)}>fetch now</button>*/}
                 {this.props.fetching && <Loading/>}
                 {this.props.fetched && <div className="issue__container">
                     {this
@@ -81,6 +88,7 @@ IssueComponent.propTypes = {
     highlightIssue: PropTypes.func.isRequired,
     unHighlightIssue: PropTypes.func.isRequired,
     fetchHighLight: PropTypes.func.isRequired,
+    fetchNotifications: PropTypes.func.isRequired,
     fetched: PropTypes.bool.isRequired,
     fetching: PropTypes.bool.isRequired,
     failed: PropTypes.bool,
@@ -108,7 +116,8 @@ const mapDispatchToProps = dispatch => (bindActionCreators({
     fetchIssueList,
     highlightIssue,
     unHighlightIssue,
-    fetchHighLight
+    fetchHighLight,
+    fetchNotifications
 }, dispatch));
 
 const hoc = connect(mapStateToProps, mapDispatchToProps)(IssueComponent);

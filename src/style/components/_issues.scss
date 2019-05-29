@@ -1,9 +1,6 @@
 .issue {
-    &__container {
-        width: 1024px;
-        margin: 0px auto;
-    }
     &__body {
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         margin-left: 60px;
@@ -22,7 +19,6 @@
         display: flex;
         max-width: 1000px;
         min-width: 400px;
-        border: solid 1px gray;
         border-radius: 10px;
         height: 100px;
         margin: 10px 0px;
