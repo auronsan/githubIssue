@@ -2,20 +2,22 @@
     &__container {
         position: absolute;
         right: 20px;
-        top: 20px;
+        top: 15px;
         width: 100px;
+        cursor: pointer;
         &.open {
             & .notification__content {
                 border-radius: 10px;
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-                background-color: white;
+                background-color: $color-white;
                 position: absolute;
                 left: -150px;
                 max-width: 250px;
                 top: 20px;
+                color: $color-black;
             }
             & .fa-bell {
-                color: #4fd619;
+                color: $color-secondary;
             }
             & .notification__content-header{
                 border-bottom: solid 1px #dddfe2;
@@ -44,7 +46,7 @@
         &-header{
             position: relative;
             top: 0px;
-            background-color: white;
+            background-color: $color-white;
             width: 250px;
             margin-top: 10px;
         }
@@ -73,6 +75,7 @@
     &__no-content {
         display: flex;
         justify-content: center;
+        color:$color-black;
     }
 
     &__label-count{
@@ -84,10 +87,11 @@
         background-color: red;
         width: 15px;
         height: 15px;
-        color: white;
+        color: $color-white;
         display: flex;
         justify-content: center;
         align-items: center;
+        pointer-events: none;
     }
 
 }

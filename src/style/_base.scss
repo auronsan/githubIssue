@@ -1,6 +1,8 @@
 body {
-    background-color: white;
+    background-color: $color-white;
     font-family: $font-family;
+    margin:0px;
+    color: $color-black;
 }
 
 a {
@@ -31,6 +33,9 @@ a {
 .header {
     position: relative;
     z-index: 2;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 10px;
 }
 .body {
     position: relative;
@@ -74,7 +79,7 @@ button {
     -moz-appearance: none;
     &:focus,
     &:hover {
-        color: #0053ba;
+        color: $color-primary;
     }
     &:focus {
         outline: 1px solid #fff;

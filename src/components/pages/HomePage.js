@@ -9,10 +9,8 @@ import {NotificationComponent} from '../notification/NotificationComponent.js';
 export const HomePage = () => (
     <main>
         <div className="header animated fadeIn">
-            <h1>React-Redux</h1>
-            <p>Github Issue list</p>
+            <span>QuodAI Challenge</span>
             <NotificationComponent/>
-            <hr/>
         </div>
          <div className="body">
          <IssueComponent/>
