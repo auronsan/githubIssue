@@ -70,10 +70,10 @@ class IssueComponent extends Component {
                                 issue={item}
                                 hightlight={this.props.highlightItem && this.props.highlightItem.id === item.id}/></div>)}
                 </div>}
-                {this.props.fetched && <button
+                {this.props.fetched && <button className='issue__next-button'
                     onClick={this
                     .next
-                    .bind(this)}>next</button>}
+                    .bind(this)}>Next</button>}
             </div>
         );
     }
