@@ -2,9 +2,8 @@
 
 import React from 'react';
 
-import {IssueComponent} from '../issue/IssueComponent';
+import {IssueComponent} from '../issue/IssueComponent.js';
 import {NotificationComponent} from '../notification/NotificationComponent.js';
-
 
 export const HomePage = () => (
     <main>
@@ -12,8 +11,8 @@ export const HomePage = () => (
             <span>QuodAI Challenge</span>
             <NotificationComponent/>
         </div>
-         <div className="body">
-         <IssueComponent/>
-         </div>
+        <div className="body">
+            <IssueComponent/>
+        </div>
     </main>
 );
