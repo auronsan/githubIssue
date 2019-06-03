@@ -31,17 +31,19 @@ a {
 }
 
 .header {
-    position: relative;
+    position: fixed;
     z-index: 2;
     background-color: $color-primary;
     color: $color-white;
     padding: 10px;
+    width: 100%;
+    top:0px;
 }
 .body {
     position: relative;
     z-index: 1;
     width: 1024px;
-    margin: 0 auto;
+    margin: 60px auto;
     min-height: 600px;
 }
 
